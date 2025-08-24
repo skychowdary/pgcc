@@ -51,9 +51,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-primary-foreground font-montserrat font-bold text-lg">PGC</span>
-          </div>
+          <img src="/pgc-logo.png" alt="PGC Logo" className="h-10 w-auto object-contain" />
         </Link>
 
         {/* Navigation */}
