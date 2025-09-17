@@ -1,39 +1,38 @@
-
 import { Link } from "react-router-dom";
 import { FileText, CheckCircle, ArrowRight } from "lucide-react";
 
-const Taxation = () => {
+const Bookkeeping = () => {
   const offerings = [
-    "Individual Tax Returns",
-    "Corporate Tax Returns",
-    "Partnership & S-Corp Returns",
-    "International Tax Compliance",
-    "FATCA & FBAR Reporting",
-    "State/Provincial Tax Compliance",
-    "GST/HST/VAT Management",
-    "Tax Planning & Advisory",
-    "Tax Audit Support",
-    "Cross-Border Tax Planning",
-    "Transfer Pricing Documentation",
-    "Tax Treaty Optimization"
+    "General Ledger Maintenance",
+    "Accounts Payable Management", 
+    "Accounts Receivable Tracking",
+    "Payroll Processing & Compliance",
+    "Bank Reconciliation",
+    "Financial Statement Preparation",
+    "Monthly/Quarterly Reporting",
+    "Chart of Accounts Setup",
+    "Multi-Currency Accounting",
+    "Tax Compliance Support",
+    "QuickBooks, Xero & Tally Setup",
+    "Year-End Preparation"
   ];
 
   const processSteps = [
     {
-      title: "Analysis",
-      description: "Comprehensive review of your tax situation and compliance requirements"
+      title: "Setup",
+      description: "Initial setup of accounting systems and chart of accounts tailored to your business needs"
     },
     {
-      title: "Preparation",
-      description: "Professional preparation of all required tax documents and filings"
+      title: "Data Entry",
+      description: "Regular data entry and transaction recording with proper categorization"
     },
     {
-      title: "Submission",
-      description: "Timely submission to relevant tax authorities with proper documentation"
+      title: "Reconciliation",
+      description: "Monthly bank reconciliation and account verification for accuracy"
     },
     {
-      title: "Audit Support",
-      description: "Ongoing support for any inquiries or audits from tax authorities"
+      title: "Reporting",
+      description: "Timely preparation of financial statements and management reports"
     }
   ];
 
@@ -46,10 +45,10 @@ const Taxation = () => {
             <FileText className="w-12 h-12 text-white mr-4" />
             <div>
               <h1 className="text-4xl md:text-5xl font-montserrat font-bold text-white">
-                Taxation Services
+                Bookkeeping Services
               </h1>
               <p className="text-xl text-blue-100 mt-2">
-                Expert tax compliance and planning for UK, US, Canada, India and Australia
+                Professional bookkeeping solutions for UK, US, Canada, India and Australia
               </p>
             </div>
           </div>
@@ -64,13 +63,13 @@ const Taxation = () => {
               {/* Overview */}
               <div>
                 <h2 className="text-2xl font-montserrat font-bold text-secondary mb-4">
-                  Comprehensive Tax Services
+                  Professional Bookkeeping Services
                 </h2>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Our expert tax team provides comprehensive tax compliance and planning services 
-                  for individuals and businesses across UK, US, Canada, India, and Australia. 
-                  We handle all aspects of your tax needs, from preparation and filing to 
-                  strategic planning and audit support.
+                  Our expert bookkeeping team provides comprehensive financial record-keeping services 
+                  for businesses across UK, US, Canada, India, and Australia. We handle all aspects 
+                  of your accounting needs, from daily transaction recording to monthly financial 
+                  reporting, ensuring accuracy and compliance with local regulations.
                 </p>
                 
                 {/* Case Study */}
@@ -79,9 +78,9 @@ const Taxation = () => {
                     Success Story
                   </h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    Helped a multinational technology company reduce their tax liability by 25% 
-                    through strategic planning and proper utilization of tax treaties across 
-                    multiple jurisdictions.
+                    Helped a growing tech startup streamline their financial processes across multiple 
+                    countries, reducing bookkeeping time by 70% while improving accuracy and ensuring 
+                    compliance with all local regulations.
                   </p>
                 </div>
               </div>
@@ -109,7 +108,7 @@ const Taxation = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-montserrat font-bold text-center text-secondary mb-12">
-            Our Tax Process
+            Our Bookkeeping Process
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
@@ -132,20 +131,47 @@ const Taxation = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-montserrat font-bold text-secondary mb-4">
+            Competitive Pricing
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            We start our bookkeeping services from $6 per hour
+          </p>
+          <div className="bg-primary text-white p-8 rounded-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl font-montserrat font-bold mb-4">
+              Transparent Pricing
+            </h3>
+            <p className="text-blue-100 mb-6">
+              No hidden fees, no surprise charges. Our bookkeeping services start at just $6 per hour, 
+              with flexible packages to suit your business needs.
+            </p>
+            <Link
+              to="/contact"
+              className="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-block"
+            >
+              Get Quote
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-montserrat font-bold text-white mb-4">
-            Ready to Optimize Your Tax Strategy?
+            Ready to Streamline Your Bookkeeping?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Schedule a consultation with our tax experts today.
+            Get professional bookkeeping services starting from $6 per hour.
           </p>
           <Link
             to="/contact"
             className="bg-white text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-block"
           >
-            Request Consultation
+            Request Service
           </Link>
         </div>
       </section>
@@ -156,11 +182,11 @@ const Taxation = () => {
           to="/contact"
           className="bg-primary text-white px-6 py-3 rounded-full shadow-lg hover:bg-primary/90 transition-colors flex items-center"
         >
-          Request Consultation
+          Request Service
         </Link>
       </div>
     </div>
   );
 };
 
-export default Taxation;
+export default Bookkeeping;

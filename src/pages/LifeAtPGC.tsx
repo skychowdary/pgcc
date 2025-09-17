@@ -246,74 +246,7 @@ const LifeAtPGC = () => {
         </div>
       </section>
 
-      {/* Employee Spotlight */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-montserrat font-bold text-center text-secondary mb-12">
-            Employee Spotlight
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Anjali Patel",
-                role: "Senior Tax Manager",
-                location: "India Operations",
-                quote: "Working at PGC has been an incredible journey. The opportunity to work on complex cross-border transactions while collaborating with teams across three countries has accelerated my professional growth tremendously.",
-                years: "3 years",
-                expertise: "Cross-border Tax Planning"
-              },
-              {
-                name: "David Rodriguez",
-                role: "Tax Director",
-                location: "Canada Operations",
-                quote: "The collaborative environment at PGC is unmatched. Working with experts from different jurisdictions has broadened my perspective and enhanced my ability to deliver innovative solutions to our clients.",
-                years: "5 years",
-                expertise: "International Tax Strategy"
-              },
-              {
-                name: "Emily Thompson",
-                role: "Senior Associate",
-                location: "U.S. Operations",
-                quote: "PGC's commitment to continuous learning and professional development has been instrumental in my career growth. The exposure to cutting-edge technology and global best practices is invaluable.",
-                years: "2 years",
-                expertise: "Tax Technology & Automation"
-              }
-            ].map((employee, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="p-6">
-                  <div className="mb-4">
-                    <h3 className="text-lg font-montserrat font-bold text-secondary">
-                      {employee.name}
-                    </h3>
-                    <p className="text-primary text-sm font-medium">
-                      {employee.role}
-                    </p>
-                    <p className="text-gray-500 text-sm">
-                      {employee.location}
-                    </p>
-                  </div>
-                  
-                  <blockquote className="text-gray-700 italic text-sm leading-relaxed mb-4">
-                    "{employee.quote}"
-                  </blockquote>
-                  
-                  <div className="flex justify-between items-center text-xs text-gray-500">
-                    <span>Experience: {employee.years}</span>
-                    <span>Expertise: {employee.expertise}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <button className="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
-              Join Our Team
-            </button>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 };

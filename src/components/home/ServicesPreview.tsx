@@ -5,13 +5,13 @@ import { FileText, Calculator, Building } from "lucide-react";
 const services = [
   {
     icon: FileText,
-    title: "U.S. Tax Solutions",
+    title: "US Bookkeeping and Tax Solutions",
     description: "Comprehensive tax planning and compliance for individuals and corporations navigating U.S. tax obligations.",
     link: "/services/taxation"
   },
   {
     icon: Calculator,
-    title: "Canada Tax Compliance",
+    title: "Canada Bookkeeping and Tax Compliance",
     description: "Expert guidance on Canadian tax regulations, including T1, T2, and cross-border reporting requirements.",
     link: "/services/taxation"
   },

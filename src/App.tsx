@@ -15,6 +15,7 @@ import WhyPGC from "./pages/WhyPGC";
 import LifeAtPGC from "./pages/LifeAtPGC";
 
 import Contact from "./pages/Contact";
+import Bookkeeping from "./pages/services/Bookkeeping";
 import Taxation from "./pages/services/Taxation";
 import Outsourcing from "./pages/services/Outsourcing";
 import VirtualCFO from "./pages/services/VirtualCFO";
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/people" element={<People />} />
+              <Route path="/services/bookkeeping" element={<Bookkeeping />} />
               <Route path="/services/taxation" element={<Taxation />} />
               <Route path="/services/outsourcing" element={<Outsourcing />} />
               <Route path="/services/virtual-cfo" element={<VirtualCFO />} />
