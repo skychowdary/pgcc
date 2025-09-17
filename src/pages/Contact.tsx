@@ -8,11 +8,9 @@ const Contact = () => {
     name: "",
     email: "",
     company: "",
-    jurisdiction: "",
     message: ""
   });
 
-  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [showChat, setShowChat] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -22,13 +20,6 @@ const Contact = () => {
     });
   };
 
-  const handleLanguageToggle = (language: string) => {
-    setSelectedLanguages(prev => 
-      prev.includes(language) 
-        ? prev.filter(l => l !== language)
-        : [...prev, language]
-    );
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,18 +37,36 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast.success("Thank you! Your message has been sent. We'll get back to you within 24 hours.");
+    // Create email content
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || 'Not provided'}
+
+Message:
+${formData.message}
+
+---
+This message was sent from the PGC Global contact form.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:info@pgcglobal.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    toast.success("Opening your email client. Please send the email to complete your inquiry.");
     
     // Reset form
     setFormData({
       name: "",
       email: "",
       company: "",
-      jurisdiction: "",
       message: ""
     });
-    setSelectedLanguages([]);
   };
 
   const offices = [
@@ -65,19 +74,9 @@ const Contact = () => {
       country: "India",
       flag: "🇮🇳",
       title: "India Headquarters",
-      address: "Hyderabad, Telangana, India",
-      phone: "+91-889-545-8388",
-      email: "india@pgc-consulting.com",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6885580066!2d78.48671831486987!3d17.385044088048736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana%2C%20India!5e0!3m2!1sen!2sus!4v1635123456789!5m2!1sen!2sus"
-    },
-    {
-      country: "USA",
-      flag: "🇺🇸",
-      title: "U.S. Office",
-      address: "New York, NY, USA",
-      phone: "+1-212-123-4567",
-      email: "usa@pgc-consulting.com",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648718453!2d-73.98784368458619!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1635123456789!5m2!1sen!2sus"
+      address: "Hyderabad",
+      phone: "8895458388",
+      email: "info@pgcglobal.in"
     }
   ];
 
@@ -152,24 +151,6 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <div>
-                    <label htmlFor="jurisdiction" className="block text-gray-700 font-medium mb-2">
-                      Primary Jurisdiction
-                    </label>
-                    <select
-                      id="jurisdiction"
-                      name="jurisdiction"
-                      value={formData.jurisdiction}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                      <option value="">Select Jurisdiction</option>
-                      <option value="usa">United States</option>
-                      <option value="canada">Canada</option>
-                      <option value="india">India</option>
-                      <option value="multiple">Multiple Jurisdictions</option>
-                    </select>
-                  </div>
                 </div>
 
                 <div>
@@ -188,25 +169,6 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                {/* Preferred Languages */}
-                <div>
-                  <label className="block text-gray-700 font-medium mb-3">
-                    Preferred Languages
-                  </label>
-                  <div className="flex flex-wrap gap-3">
-                    {["English", "Hindi", "Telugu"].map((language) => (
-                      <label key={language} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={selectedLanguages.includes(language)}
-                          onChange={() => handleLanguageToggle(language)}
-                          className="mr-2 rounded border-gray-300 text-primary focus:ring-primary"
-                        />
-                        <span className="text-gray-700">{language}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
 
                 <button
                   type="submit"
@@ -246,20 +208,6 @@ const Contact = () => {
                         <Mail className="w-4 h-4 mr-2 text-primary" />
                         <span>{office.email}</span>
                       </div>
-                    </div>
-
-                    {/* Google Map Embed */}
-                    <div className="mt-4 h-48 rounded-lg overflow-hidden">
-                      <iframe
-                        src={office.mapSrc}
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title={`${office.country} Office Location`}
-                      ></iframe>
                     </div>
                   </div>
                 ))}

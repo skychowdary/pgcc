@@ -11,11 +11,11 @@ export const Footer = () => {
           <div>
             <h3 className="font-montserrat font-bold text-lg mb-4">Contact Info</h3>
             <div className="space-y-2 text-sm text-gray-300">
-              <p>Email: info@pgc-consulting.com</p>
-              <p>Phone: +91-40-1234-5678</p>
+              <p>Email: info@pgcglobal.in</p>
+              <p>Phone: 8895458388</p>
               <div>
                 <p className="font-medium text-white">India HQ:</p>
-                <p>Hyderabad, Telangana</p>
+                <p>Hyderabad</p>
               </div>
             </div>
           </div>
@@ -77,9 +77,12 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-sm text-gray-400">
-            © 2025 Precedence Global Consulting. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center space-y-4">
+            <img src="/pgc-logo.png" alt="PGC Logo" className="h-14 w-auto object-contain" />
+            <p className="text-sm text-gray-400">
+              © 2025 Precedence Global Consulting. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

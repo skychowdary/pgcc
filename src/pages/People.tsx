@@ -8,68 +8,98 @@ const People = () => {
   const leaders = [
     {
       name: "Eshwar Prasad Yadagini",
-      title: "Managing Director & Cheif Consultant",
-      location: "Toronto, Canada",
-      bio: "Seasoned tax professional with over 15 years of experience in cross-border taxation and regulatory compliance.",
+      title: "MBA (Finance)",
+      location: "Hyderabad, India",
+      bio: "With over 7 years of experience in taxation and bookkeeping, I bring a strong foundation in Canadian, U.S., and Indian tax and accounting systems.",
       // photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
       fullBio: {
-        about: "Eshwar Prasad Yadagini is a distinguished tax professional with extensive experience in international tax planning and compliance. He leads PGC's Canadian operations and specializes in cross-border tax strategies for multinational corporations.",
+        about: "With over 7 years of experience in taxation and bookkeeping, I bring a strong foundation in Canadian, U.S., and Indian tax and accounting systems. My expertise spans across personal and corporate tax compliance, cross-border filings, financial reporting, and day-to-day bookkeeping support for businesses of all sizes. I am committed to delivering accurate, timely, and customized financial solutions to each client, always with a focus on value and cost-effectiveness. Whether it's helping small businesses stay compliant or assisting individuals with complex tax matters, my approach is always rooted in integrity, responsiveness, and results.",
         experience: [
-          "Managing Director, PGC Canada (2018-Present)",
-          "Senior Tax Manager, Big 4 Firm (2014-2018)",
-          "Tax Consultant, International Advisory (2009-2014)"
+          "7+ years in taxation and bookkeeping",
+          "Expertise in Canadian, U.S., and Indian tax systems",
+          "Cross-border tax compliance and filings",
+          "Financial reporting and day-to-day bookkeeping"
         ],
         education: [
-          "CPA, CA - Chartered Professional Accountants of Canada",
-          "Master of Taxation, University of Toronto",
-          "Bachelor of Commerce, University of British Columbia"
+          "MBA (Finance)",
+          "Specialized training in international taxation",
+          "Certifications in bookkeeping and accounting"
         ],
-        skills: ["Cross-Border Taxation", "Canadian Tax Compliance", "International Tax Planning", "FATCA & CRS", "Transfer Pricing"],
-        linkedin: "https://linkedin.com/in/eshwar-yadagini"
+        skills: ["Canadian, U.S., and Indian Taxation", "Bookkeeping & Financial Reporting", "Cross-Border Tax Compliance", "Corporate & Personal Tax Returns"],
+        linkedin: "https://linkedin.com/in/eshwar-yadagini",
+        personal: "Outside of work, I find joy in photography, long bike rides, and traveling to new places, experiences that keep me curious, grounded, and inspired."
       }
     },
     {
       name: "Naresh Tummalapalli",
-      title: "CA",
-      location: "New York, USA",
-      bio: "Expert in U.S. federal and state taxation with specialized knowledge in international business structures.",
+      title: "Chartered Accountant",
+      location: "Hyderabad, India",
+      bio: "Qualified Chartered Accountant with over 9 years of experience in Taxation, Bookkeeping, and Advisory Services.",
       // photo: "https://images.unsplash.com/photo-1494790108755-2616b612b098?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
       fullBio: {
-        about: "Naresh Tummalapalli brings deep expertise in U.S. taxation and international compliance to PGC's clients. He specializes in helping multinational companies navigate complex U.S. tax regulations.",
+        about: "Naresh is a qualified Chartered Accountant with over 9 years of experience in Taxation, Bookkeeping, and Advisory Services. He brings deep expertise in both Indian and US tax regulations, offering clients a unique cross-border perspective in accounting and compliance. Known for his technical excellence and problem-solving abilities, Naresh has successfully handled complex projects, providing tailored solutions that ensure both compliance and efficiency. He is also highly experienced in conducting Internal and Statutory Audits, helping businesses strengthen their financial and operational frameworks. Naresh is driven by a commitment to deliver high-quality, value-driven services at a very reasonable cost, making professional excellence accessible to businesses of all sizes.",
         experience: [
-          "U.S. Tax Director, PGC (2020-Present)",
-          "Senior Manager, International Tax, Big 4 Firm (2016-2020)",
-          "Tax Associate, Regional CPA Firm (2012-2016)"
+          "9+ years in Taxation, Bookkeeping, and Advisory Services",
+          "Deep expertise in Indian and US tax regulations",
+          "Internal and Statutory Audits",
+          "Complex project handling and problem-solving"
         ],
         education: [
-          "Chartered Accountant (CA), ICAI",
-          "Master of Science in Taxation, NYU",
-          "Bachelor of Accounting, University of Pennsylvania"
+          "Chartered Accountant (CA)",
+          "Specialized training in US tax regulations",
+          "Advanced certifications in auditing and compliance"
         ],
-        skills: ["U.S. Federal Taxation", "State & Local Tax", "International Compliance", "Form 1120 & 1040", "FATCA Reporting"],
-        linkedin: "https://linkedin.com/in/naresh-tummalapalli-ca"
+        skills: ["Indian & US Taxation", "Bookkeeping & Accounting", "Tax Advisory & Planning", "Internal & Statutory Audits", "Financial Reporting & Compliance", "Complex Tax Structuring"],
+        linkedin: "https://linkedin.com/in/naresh-tummalapalli-ca",
+        personal: "Outside of his professional commitments, Naresh enjoys reading books and engaging in various other enriching activities during his free time."
       }
     },
     {
       name: "Gopi Kantheti",
-      title: "CA",
+      title: "CA (Semi Qualified)",
       location: "Hyderabad, India",
-      bio: "Leading tax professional with comprehensive knowledge of Indian taxation and GST compliance frameworks.",
+      bio: "Chartered Accountant with over 9 years of professional experience in Indian and US taxation, accounting, and regulatory frameworks.",
       // photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
       fullBio: {
-        about: "Gopi Kantheti oversees PGC's India operations and brings extensive experience in Indian taxation, GST, and regulatory compliance. He helps international businesses establish and maintain compliance in India.",
+        about: "With over 9 years of professional experience, Gopi Kantheti is a Chartered Accountant well-versed in both Indian and US taxation, accounting, and regulatory frameworks. He brings deep technical expertise in taxation, bookkeeping, indirect taxes, and both internal and statutory audits, delivering solutions tailored to the unique needs of retail and service-based businesses. Gopi is known for his ability to solve complex financial and compliance challenges, using his strong investigative skills to identify and rectify discrepancies in client records. His approach is grounded in accuracy, transparency, and a commitment to providing high-quality services at a reasonable cost. Whether it's navigating tax laws or refining accounting systems, Gopi ensures that each client receives personalized attention and value-driven support.",
         experience: [
-          "India Operations Head, PGC (2019-Present)",
-          "Senior Tax Consultant, Deloitte India (2015-2019)",
-          "Assistant Manager, KPMG India (2011-2015)"
+          "9+ years in Indian and US taxation and accounting",
+          "Deep technical expertise in taxation and bookkeeping",
+          "Indirect taxes and regulatory compliance",
+          "Internal and statutory audits"
         ],
         education: [
-          "Chartered Accountant (CA), ICAI",
-          "Company Secretary (CS), ICSI",
-          "Bachelor of Commerce, Osmania University"
+          "CA (Semi Qualified)",
+          "Specialized training in US taxation",
+          "Advanced certifications in accounting and compliance"
         ],
-        skills: ["Indian Income Tax", "GST Compliance", "Transfer Pricing", "FEMA Regulations", "Corporate Law"],
-        linkedin: "https://linkedin.com/in/gopi-kantheti-ca"
+        skills: ["Indian and US Taxation", "Bookkeeping & Accounting", "Indirect Taxes", "Internal & Statutory Audits", "Financial Compliance", "Regulatory Frameworks"],
+        linkedin: "https://linkedin.com/in/gopi-kantheti-ca",
+        personal: "Outside of his professional life, Gopi enjoys reading and engaging in various personal development activities."
+      }
+    },
+    {
+      name: "Vamsi Kora",
+      title: "Financial Controller",
+      location: "Hyderabad, India",
+      bio: "Over 8 years of experience in bookkeeping, taxation, and audit services across US, Canada, UK, and India.",
+      // photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      fullBio: {
+        about: "Vamsi Kora brings over 8 years of experience in bookkeeping, taxation, and audit services across US, Canada, UK, and India. With a strong command of international accounting standards and compliance frameworks, he has become a go-to expert for resolving complex bookkeeping challenges. Vamsi is known for his analytical mindset, attention to detail, and a client-focused approach. His strength lies not only in technical execution but also in building and maintaining strong client relationships, ensuring that businesses feel supported and understood throughout every financial cycle.",
+        experience: [
+          "8+ years in bookkeeping, taxation, and audit services",
+          "International experience across US, Canada, UK, and India",
+          "Complex bookkeeping challenge resolution",
+          "Client relationship management"
+        ],
+        education: [
+          "Financial Controller Certification",
+          "International accounting standards training",
+          "Advanced bookkeeping and audit certifications"
+        ],
+        skills: ["International Bookkeeping", "Multi-country Taxation", "Audit Services", "International Accounting Standards", "Compliance Frameworks", "Client Relationship Management"],
+        linkedin: "https://linkedin.com/in/vamsi-kora",
+        personal: "Outside of work, Vamsi enjoys staying active by playing cricket and badminton, bringing the same energy and team spirit to the field as he does to his profession."
       }
     }
   ];
@@ -190,6 +220,13 @@ const People = () => {
                       ))}
                     </div>
                   </div>
+
+                  {selectedProfile.fullBio.personal && (
+                    <div>
+                      <h4 className="text-lg font-montserrat font-bold text-secondary mb-3">Beyond the Numbers</h4>
+                      <p className="text-gray-700 leading-relaxed">{selectedProfile.fullBio.personal}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -36,6 +36,13 @@ const Services = () => {
   const services = [
     {
       icon: FileText,
+      title: "Bookkeeping",
+      description: "Professional bookkeeping services for accurate financial records",
+      link: "/services/bookkeeping",
+      id: "bookkeeping"
+    },
+    {
+      icon: FileText,
       title: "Taxation",
       description: "Comprehensive tax planning and compliance services",
       link: "/services/taxation",
