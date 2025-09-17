@@ -8,11 +8,9 @@ const Contact = () => {
     name: "",
     email: "",
     company: "",
-    jurisdiction: "",
     message: ""
   });
 
-  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [showChat, setShowChat] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -22,13 +20,6 @@ const Contact = () => {
     });
   };
 
-  const handleLanguageToggle = (language: string) => {
-    setSelectedLanguages(prev => 
-      prev.includes(language) 
-        ? prev.filter(l => l !== language)
-        : [...prev, language]
-    );
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,18 +37,36 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    toast.success("Thank you! Your message has been sent. We'll get back to you within 24 hours.");
+    // Create email content
+    const subject = `Contact Form Submission from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || 'Not provided'}
+
+Message:
+${formData.message}
+
+---
+This message was sent from the PGC Global contact form.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:info@pgcglobal.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    toast.success("Opening your email client. Please send the email to complete your inquiry.");
     
     // Reset form
     setFormData({
       name: "",
       email: "",
       company: "",
-      jurisdiction: "",
       message: ""
     });
-    setSelectedLanguages([]);
   };
 
   const offices = [
@@ -142,24 +151,6 @@ const Contact = () => {
                     />
                   </div>
                   
-                  <div>
-                    <label htmlFor="jurisdiction" className="block text-gray-700 font-medium mb-2">
-                      Primary Jurisdiction
-                    </label>
-                    <select
-                      id="jurisdiction"
-                      name="jurisdiction"
-                      value={formData.jurisdiction}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                    >
-                      <option value="">Select Jurisdiction</option>
-                      <option value="usa">United States</option>
-                      <option value="canada">Canada</option>
-                      <option value="india">India</option>
-                      <option value="multiple">Multiple Jurisdictions</option>
-                    </select>
-                  </div>
                 </div>
 
                 <div>
@@ -178,25 +169,6 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                {/* Preferred Languages */}
-                <div>
-                  <label className="block text-gray-700 font-medium mb-3">
-                    Preferred Languages
-                  </label>
-                  <div className="flex flex-wrap gap-3">
-                    {["English", "Hindi", "Telugu"].map((language) => (
-                      <label key={language} className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={selectedLanguages.includes(language)}
-                          onChange={() => handleLanguageToggle(language)}
-                          className="mr-2 rounded border-gray-300 text-primary focus:ring-primary"
-                        />
-                        <span className="text-gray-700">{language}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
 
                 <button
                   type="submit"
